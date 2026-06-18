@@ -1,0 +1,22 @@
+import math
+
+print("--- ⚡ The Power Calculator ⚡ ---")
+print()
+
+# --- Step 1: Get user inputs and convert them to floats ---
+base = float(input("Enter the base number: "))
+power = float(input("Enter the power (exponent) number: "))
+
+# --- Step 2: Calculate the result ---
+# Method A: Using the ** operator
+result_operator = base ** power
+
+# Method B: Using math.pow()
+result_math_module = math.pow(base, power)
+
+# --- Step 3: Print the results ---
+print()
+print("--- Results ---")
+print(str(base) + " raised to the power of " + str(power) + " is:")
+print("Using ** operator:   ", result_operator)
+print("Using math.pow():     ", result_math_module)
