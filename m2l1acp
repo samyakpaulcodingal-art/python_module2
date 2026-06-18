@@ -1,0 +1,12 @@
+print("--- 🎂 Age Range Validator ---")
+print()
+
+# --- Step 1 & 2: Get user input and convert it to a number (int) ---
+user_input = input("Please enter your age: ")
+age = int(user_input)
+
+# --- Step 3 & 4: Check if the age is between 10 and 20 ---
+if age >= 10 and age <= 20:
+    print("✅ Access Granted: Your age (" + str(age) + ") is between 10 and 20!")
+else:
+    print("❌ Access Denied: Your age (" + str(age) + ") is NOT between 10 and 20.")
