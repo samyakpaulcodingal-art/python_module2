@@ -1,0 +1,30 @@
+print("--- 🤖 Decimal to Binary Converter 🤖 ---")
+print()
+
+# --- Step 1: Get user input ---
+decimal_number = int(input("Enter a positive whole number: "))
+
+# --- Step 2: Method 1 (Built-in Function) ---
+builtin_binary = bin(decimal_number)
+
+# --- Step 3: Method 2 (Mathematical Loop Logic) ---
+# We make a copy of the number so we don't destroy the original variable
+temp_number = decimal_number
+custom_binary = ""
+
+# Loop until our number drops to 0
+while temp_number > 0:
+    remainder = temp_number % 2  # Find the remainder (0 or 1)
+    custom_binary = str(remainder) + custom_binary  # Add it to the FRONT of our string
+    temp_number = temp_number // 2  # Divide the number by 2 and drop the decimal
+
+# Handle the edge case where the user inputs 0
+if decimal_number == 0:
+    custom_binary = "0"
+
+# --- Step 4: Print the results ---
+print()
+print("--- Conversion Results ---")
+print("Decimal Number:        ", decimal_number)
+print("Using bin() function:  ", builtin_binary)
+print("Using math loop logic: ", custom_binary)
