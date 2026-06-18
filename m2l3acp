@@ -1,0 +1,25 @@
+print("--- 🔢 The Digit Counter 🔢 ---")
+print()
+
+# --- Step 1: Get user input ---
+user_input = input("Enter a positive whole number: ")
+
+# --- Step 2: Method 1 (String Length) ---
+# len() counts the number of characters in a string
+digit_count_string = len(user_input)
+
+# --- Step 3: Method 2 (Mathematical Loop) ---
+# Convert the string to an actual integer for math operations
+number = int(user_input)
+digit_count_math = 0
+
+# Loop until the number becomes 0
+while number > 0:
+    number = number // 10  # This removes the last digit (e.g., 458 // 10 = 45)
+    digit_count_math += 1  # Add 1 to our counter
+
+# --- Step 4: Print the results ---
+print()
+print("--- Results ---")
+print("Count using String method: ", digit_count_string)
+print("Count using Math loop method:", digit_count_math)
